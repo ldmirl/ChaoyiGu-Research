@@ -1,6 +1,3 @@
-#
-# Copyright (c) Facebook, Inc. and its affiliates.
-#
 import os
 from glob import glob
 import warnings
@@ -10,7 +7,6 @@ import cv2
 from torch.utils.data import Dataset
 from numpy import *
 import pandas as pd
-
 
 class load_data_val(Dataset):
     def __init__(self):
