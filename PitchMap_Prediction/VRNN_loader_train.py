@@ -15,7 +15,7 @@ import pandas as pd
 class load_data_train(Dataset):
     def __init__(self):
         self.batch_size = 64
-        self.data = np.load('/home/aarongu/Downloads/VRNN_TRAIN/data.npy')
+        self.data = np.load('')
         num_of_seq = (self.data.shape[0]//self.batch_size)*self.batch_size
         self.data = self.data[:num_of_seq]
         del num_of_seq
