@@ -12,9 +12,6 @@ from VRNN_loader_val import load_data_val
 from torch.utils.data import DataLoader
 import numpy as np
 
-#  model name
-# model_name = 'ce_3lstms'
-# model_name = 'ssim_condition_3lstm'
 model_name = 'ssim_condition_new'
 
 # hyperparameters
