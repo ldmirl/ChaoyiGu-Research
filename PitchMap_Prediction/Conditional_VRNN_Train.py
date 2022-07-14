@@ -6,7 +6,7 @@ import torch.utils.data
 from torchvision import datasets, transforms
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
-from VRNN_LATENT import VRNN
+from Conditional_VRNN import VRNN
 from VRNN_loader_train import load_data_train
 from VRNN_loader_val import load_data_val
 from torch.utils.data import DataLoader
