@@ -17,9 +17,6 @@ model_name = 'ssim_condition_new'
 # hyperparameters
 num_workers = 1
 
-# beta_kld = 0.00025 * 4
-# beta_kld_2 = 0.00050 * 4
-
 seq_len = 6
 batch_size = 64
 
