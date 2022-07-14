@@ -11,7 +11,6 @@ from torch.utils.data import Dataset
 from numpy import *
 import pandas as pd
 
-
 class load_data_train(Dataset):
     def __init__(self):
         self.batch_size = 64
