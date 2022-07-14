@@ -20,7 +20,6 @@ z_dim_2 = 64
 h_dim = 128
 timespan = 2
 
-
 class classifier(nn.Module):
     def __init__(self, h_dim, z_dim, n_layers, bias=False):
         super(classifier, self).__init__()
