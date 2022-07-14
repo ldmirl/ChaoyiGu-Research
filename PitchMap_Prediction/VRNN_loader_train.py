@@ -22,5 +22,4 @@ class load_data_train(Dataset):
         return (x,index)
     
     def __len__(self):
-#        print(len(self.data))
         return len(self.data)
