@@ -11,11 +11,6 @@ from torchvision import datasets, transforms
 from torch.autograd import Variable
 import matplotlib.pyplot as plt
 
-"""implementation of the Variational Recurrent
-Neural Network (VRNN) from https://arxiv.org/abs/1506.02216
-using unimodal isotropic gaussian distributions for 
-inference, prior, and generating models."""
-
 # changing device
 device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 EPS = torch.finfo(torch.float).eps  # numerical logs
