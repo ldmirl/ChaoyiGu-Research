@@ -145,15 +145,15 @@ class VRNN(nn.Module):
                                      )
 
         # recurrence
-        self.lstm_push = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
-                            batch_first=True)
-        self.lstm_back = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
-                              batch_first=True)
-        self.lstm_stay = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
-                              batch_first=True)
+#         self.lstm_push = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
+#                             batch_first=True)
+#         self.lstm_back = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
+#                               batch_first=True)
+#         self.lstm_stay = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
+#                               batch_first=True)
 
-        # self.lstm_general = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
-        #                       batch_first=True)
+        self.lstm_general = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
+                              batch_first=True)
 
         self.classifier = torch.load('')
         # self.classifier = PitchSeq_Classifier.classifier.load_state_dict()
