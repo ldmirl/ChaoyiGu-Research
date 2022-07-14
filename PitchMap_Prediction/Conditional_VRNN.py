@@ -359,7 +359,7 @@ class VRNN(nn.Module):
         dec_mean_t = self.decoder(dec_t)
 
         # recurrence
-        _, h = self.lstm_push(torch.cat([phi_x_t, phi_z_t], 1).reshape(batch_size_sample, 1, h_dim + h_dim), h)
+        _, h = self.lstm_general(torch.cat([phi_x_t, phi_z_t], 1).reshape(batch_size_sample, 1, h_dim + h_dim), h)
 
         for t in range(1, seq_len):
 
@@ -394,7 +394,7 @@ class VRNN(nn.Module):
             phi_x_t = phi_x_t.reshape(batch_size_sample, 64 * 4 * 4)
 
             # recurrence
-            _, h = self.lstm_push(torch.cat([phi_x_t, phi_z_t], 1).reshape(batch_size_sample, 1, h_dim + h_dim), h)
+            _, h = self.lstm_general(torch.cat([phi_x_t, phi_z_t], 1).reshape(batch_size_sample, 1, h_dim + h_dim), h)
 
             sample.append(dec_mean_t.data)
 
