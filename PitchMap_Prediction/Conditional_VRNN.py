@@ -155,7 +155,7 @@ class VRNN(nn.Module):
         # self.lstm_general = nn.LSTM(input_size=h_dim + h_dim, hidden_size=h_dim, num_layers=self.n_layers, bias=bias,
         #                       batch_first=True)
 
-        self.classifier = torch.load('/home/aarongu/anaconda3/envs/VRNN_Torch/classifier_0/model/20.pth')
+        self.classifier = torch.load('')
         # self.classifier = PitchSeq_Classifier.classifier.load_state_dict()
 
     def forward(self, x):
